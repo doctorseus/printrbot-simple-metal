@@ -38,6 +38,7 @@ sudo dfu-programmer at90usb1286 flash ./.pio/build/at90usb1286_dfu/firmware.hex 
 ```
 M502 ; EEPROM Factory Reset (version missmatch)
 
+# Z-Probe Offset https://3dprinting.stackexchange.com/a/5858
 M851 Z-1.2 ; Z-Probe Offset
 M500 ; Store in EEPROM
 M501 ; Load from EEPROM
