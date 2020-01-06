@@ -37,9 +37,15 @@ sudo dfu-programmer at90usb1286 flash ./.pio/build/at90usb1286_dfu/firmware.hex 
 ## Configure Firmware
 ```
 M502 ; EEPROM Factory Reset (version missmatch)
+M500 ; Store in EEPROM
 
 # Z-Probe Offset https://3dprinting.stackexchange.com/a/5858
 M851 Z-1.2 ; Z-Probe Offset
 M500 ; Store in EEPROM
 M501 ; Load from EEPROM
+
+G1 Z0;   // This will move the head to zero height;
+M211 S0; // This will disable the end stops so that you 
+         // will be able to proceed lower than Z=0
+M211 S1;     // Enable the end stops again
 ```
