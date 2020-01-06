@@ -33,7 +33,7 @@ sudo dfu-programmer at90usb1286 flash RevFv1.0_Printrbot_Simple_Metal_HB.hex --d
 
 ## Configure Firmware
 ```
-M851 Z-1.2
-M500
-M501
+M851 Z-1.2 ; Z-Probe Offset
+M500 ; Store in EEPROM
+M501 ; Load from EEPROM
 ```
