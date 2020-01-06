@@ -28,7 +28,10 @@ Firmware file __firmware.hex__ can be found in
 ## Flash Firmware
 ```
 sudo dfu-programmer at90usb1286 erase --debug 100
-sudo dfu-programmer at90usb1286 flash RevFv1.0_Printrbot_Simple_Metal_HB.hex --debug 100
+sudo dfu-programmer at90usb1286 flash ./.pio/build/at90usb1286_dfu/firmware.hex --debug 100
+
+# Pre-build firmware found at https://github.com/Printrbot/printrboardmodernmarlin/tree/master/Simple_Metal
+# sudo dfu-programmer at90usb1286 flash RevFv1.0_Printrbot_Simple_Metal_HB.hex --debug 100
 ```
 
 ## Configure Firmware
