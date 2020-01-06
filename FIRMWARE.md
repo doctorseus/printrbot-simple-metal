@@ -1,3 +1,4 @@
+## Build Firmware
 
 ```
 export PATH=$PATH:~/.platformio/penv/bin
@@ -23,3 +24,16 @@ platformio run -e at90usb1286_dfu
 
 Firmware file __firmware.hex__ can be found in
 ```./.pio/build/at90usb1286_dfu/```
+
+## Flash Firmware
+```
+sudo dfu-programmer at90usb1286 erase --debug 100
+sudo dfu-programmer at90usb1286 flash RevFv1.0_Printrbot_Simple_Metal_HB.hex --debug 100
+```
+
+## Configure Firmware
+```
+M851 Z-1.2
+M500
+M501
+```
