@@ -13,6 +13,10 @@ cp Marlin/Configuration_adv.h ./Marlin-Build/Marlin/Configuration_adv.h
 
 cd Marlin-Build/
 
+# IMPORTANT: To avoid a compile issue with an lib we actually don't need run the following:
+sed -e '/\sTMCStepper/ s/^/#/g' platformio.ini
+# It will remove the dependcy for our build.
+
 # Start build with selected board env
 platformio run -e at90usb1286_dfu
 ```
