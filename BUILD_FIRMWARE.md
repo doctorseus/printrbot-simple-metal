@@ -20,3 +20,6 @@ sed -e '/\sTMCStepper/ s/^/#/g' platformio.ini
 # Start build with selected board env
 platformio run -e at90usb1286_dfu
 ```
+
+Firmware file __firmware.hex__ can be found in
+```./.pio/build/at90usb1286_dfu/```
