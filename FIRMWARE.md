@@ -40,7 +40,7 @@ M502 ; EEPROM Factory Reset (version missmatch)
 M500 ; Store in EEPROM
 
 # Z-Probe Offset https://3dprinting.stackexchange.com/a/5858
-M851 Z-1.2 ; Z-Probe Offset
+M851 Z-1.6 ; Z-Probe Offset
 M500 ; Store in EEPROM
 M501 ; Load from EEPROM
 
