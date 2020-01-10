@@ -6,17 +6,18 @@ export PATH=$PATH:~/.platformio/penv/bin
 
 ```
 # Clone latest firmware source
-git clone https://github.com/MarlinFirmware/Marlin.git Marlin-Build
+git clone https://github.com/MarlinFirmware/Marlin.git Marlin-git
 
-# Copy existing configuration into build folder
-cp Marlin/Configuration.h ./Marlin-Build/Marlin/Configuration.h
-cp Marlin/Configuration_adv.h ./Marlin-Build/Marlin/Configuration_adv.h
+# Symlink existing configuration into build folder
+ln -rfs Marlin/Configuration.h Marlin-git/Marlin/Configuration.h
+ln -rfs Marlin/Configuration_adv.h Marlin-git/Marlin/Configuration_adv.h
 
-cd Marlin-Build/
+cd Marlin-git/
 
-# IMPORTANT: To avoid a compile issue with an lib we actually don't need run the following:
-sed -e '/\sTMCStepper/ s/^/#/g' platformio.ini
-# It will remove the dependcy for our build.
+# IMPORTANT:
+# We need to remove an unrequired dependency to avoid running into a compile issue:
+# Add the following below the [env:at90usb1286_dfu] block in platformio.ini:
+lib_ignore    = TMCStepper
 
 # Start build with selected board env
 platformio run -e at90usb1286_dfu
