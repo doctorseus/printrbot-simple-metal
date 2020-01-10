@@ -40,6 +40,10 @@ sudo dfu-programmer at90usb1286 flash ./.pio/build/at90usb1286_dfu/firmware.hex 
 M502 ; EEPROM Factory Reset (version missmatch)
 M500 ; Store in EEPROM
 
+# PID autotune
+M303 E-1 S60 C8 ; autotune BED
+M303 E0 S210 C8 ; autotune EXTRUDER0
+
 # Z-Probe Offset https://3dprinting.stackexchange.com/a/5858
 M851 Z-1.6 ; Z-Probe Offset
 M500 ; Store in EEPROM
