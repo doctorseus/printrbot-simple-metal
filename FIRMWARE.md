@@ -1,5 +1,10 @@
 ## Build Firmware
 
+First you need to install **VSCode**: https://aur.archlinux.org/packages/visual-studio-code-bin/ (Arch only)  
+Then install **platformio**: https://platformio.org/install/ide?install=vscode
+
+Then to build from CLI:
+
 ```
 export PATH=$PATH:~/.platformio/penv/bin
 ```
