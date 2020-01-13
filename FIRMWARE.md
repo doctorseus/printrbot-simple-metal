@@ -17,6 +17,10 @@ git clone https://github.com/MarlinFirmware/Marlin.git Marlin-git
 ln -rfs Marlin/Configuration.h Marlin-git/Marlin/Configuration.h
 ln -rfs Marlin/Configuration_adv.h Marlin-git/Marlin/Configuration_adv.h
 
+# To select specific profile:
+ln -rfs Marlin/Configuration-doctorseus.h Marlin-git/Marlin/Configuration.h
+ln -rfs Marlin/Configuration_adv-doctorseus.h Marlin-git/Marlin/Configuration_adv.h
+
 cd Marlin-git/
 
 # IMPORTANT:
